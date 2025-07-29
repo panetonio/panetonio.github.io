@@ -122,18 +122,19 @@
           HERO SECTION
         -->
         <section id="inicio" class="container mx-auto px-6 py-20 md:py-32">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-2 md:grid-cols-[2fr_3fr] gap-12 items-center">
+                <div class="flex justify-center">
+                    <img src="Fotos/Foto1.jpg" alt="Foto da psicóloga Gabriela Arakaki" class="rounded-full w-80 h-80 md:w-96 md:h-96 object-cover shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/500x500/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
+                </div>
+                <div class="text-center md:text-right">
                     <h1 class="text-5xl md:text-5xl font-bold leading-tight">Conhecer sua mente é o primeiro passo para transformá-la.</h1>
-                    <p class="mt-6 text-lg" style="color: var(--text-secondary-color); text-align: justify;">
+                    <p class="mt-6 text-lg" style="color: var(--text-secondary-color); ">
                         Sou Gabriela Arakaki, psicóloga e neuropsicóloga. Na minha prática, busco integrar acolhimento, escuta qualificada e ciência.
                     </p>
                     <a href="https://wa.me/5567981091382?text=Olá,%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="mt-8 inline-block bg-accent text-white font-bold text-lg py-4 px-8 rounded-lg hover:bg-accent-hover transition-transform transform hover:scale-105 shadow-lg">Quero agendar minha consulta</a>
                     <p class="mt-4 text-sm text-gray-500">Atendimento online e presencial.</p>
                 </div>
-                <div class="flex justify-center">
-                    <img src="Fotos/Foto1.jpg" alt="Foto da psicóloga Gabriela Arakaki" class="rounded-full w-80 h-80 md:w-96 md:h-96 object-cover shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/500x500/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
-                </div>
+
             </div>
         </section>
 
@@ -143,9 +144,7 @@
         <section id="sobre" class="bg-white py-20 md:py-24">
             <div class="container mx-auto px-20">
                 <div class="grid grid-cols-1 md:grid-cols-5 gap-12 items-center">
-                    <div class="md:col-span-2 flex justify-center">
-                        <img src="Fotos/Foto2.jpg" alt="Gabriela Arakaki em um ambiente profissional" class="rounded-2xl w-full max-w-sm object-cover shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/500x600/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
-                    </div>
+                    
                     <div class="md:col-span-3">
                         <h2 class="text-4xl font-bold mb-4">Olá, que bom ter você aqui!</h2>
                         <p class="text-lg mb-4" style="color: var(--text-secondary-color); text-align: justify;">Atuo através das práticas baseadas em evidências, especialmente pela Terapia Cognitivo-Comportamental (TCC) e Terapias Contextuais, como a DBT. Atendo, principalmente, adolescentes e adultos, com um olhar atento às singularidades de cada trajetória, especialmente nos casos de neurodivergência.              
@@ -156,6 +155,9 @@
                             <p style="color: var(--text-secondary-color);">CRP 14/09498</p>
                         </div>
                     </div>
+                    <div class="md:col-span-2 flex justify-center">
+                        <img src="Fotos/Foto2.jpg" alt="Gabriela Arakaki em um ambiente profissional" class="rounded-2xl w-full max-w-sm object-cover shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/500x600/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
+                    </div>
                 </div>
             </div>
         </section>
@@ -164,6 +166,7 @@
           COMO FUNCIONA SECTION (CORRIGIDA)
         -->
         <section id="como-funciona" class="py-20 md:py-24">
+
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
                     <h2 class="text-4xl font-bold">Como Funciona</h2>
@@ -283,6 +286,9 @@ document.addEventListener("DOMContentLoaded", () => {
           FAQ SECTION
         -->
         <section id="faq" class="py-20 md:py-24">
+            <!-- <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-80 pointer-events-none -z-0">
+                <img src="Logos/ÍCONE/PNG/Group 806.png" alt="Ícone de cérebro da marca" class="w-[500px] h-auto">
+            </div> -->
             <div class="container mx-auto px-6 max-w-7xl">
                 <div class="text-center mb-16">
                     <h2 class="text-4xl font-bold">Perguntas Frequentes</h2>
@@ -319,8 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <section id="localizacao" class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold">Atendimento Presencial</h2>
-                    <p class="text-lg mt-2" style="color: var(--text-secondary-color);">O consultório está localizado em uma área central e de fácil acesso.</p>
+                    <h2 class="text-4xl font-bold">Atendimento Presencial e Online</h2>
                     <p class="mt-4 text-md font-semibold">R. Pernambuco, 806, São Francisco</p>
                     <p style="color: var(--text-secondary-color);">Campo Grande - MS, 79010-040</p>
                 </div>
