@@ -56,3 +56,38 @@ h1, h2, h3, h4, h5, h6 {
 .header-bg {
     background-color: rgba(227, 223, 211, 0.8); /* var(--bg-color) com transparência */
 }
+
+#faq details {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: var(--font-secondary);
+  color: var(--text-secondary-color);
+
+  summary {
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+
+    &::after {
+      content: "▼";
+      float: right;
+      transition: transform 0.3s ease;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &[open] summary {
+    margin-bottom: 0.5rem;
+
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
