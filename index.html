@@ -496,20 +496,10 @@
                 let touchStartY = 0;
                 let touchEndY = 0;
                 
-                toggle.addEventListener('touchstart', (e) => {
-                    touchStartY = e.touches[0].clientY;
-                }, { passive: true });
-                
-                toggle.addEventListener('touchend', (e) => {
-                    touchEndY = e.changedTouches[0].clientY;
-                    const touchDiff = Math.abs(touchStartY - touchEndY);
-                    
-                    // Only trigger if it's a tap (not a scroll)
-                    if (touchDiff < 10) {
-                        e.preventDefault();
-                        handleTabClick(toggle);
-                    }
+                toggle.addEventListener('click', (e) => {
+                    handleTabClick(toggle);
                 });
+
                 
                 toggle.addEventListener('click', (e) => {
                     // Prevent double triggering on mobile
