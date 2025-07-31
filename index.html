@@ -16,6 +16,9 @@
     <!-- Swiper.js (para o carrossel de depoimentos) -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
         /* Definindo a nova paleta de cores e fontes como variáveis CSS */
         :root {
@@ -110,7 +113,7 @@
             <a href="#depoimentos" class="block text-center py-3 px-6 hover:text-accent">Depoimentos</a>
             <a href="#faq" class="block text-center py-3 px-6 hover:text-accent">FAQ</a>
             <a href="#localizacao" class="block text-center py-3 px-6 hover:text-accent">Localização</a>
-            <a href="#contato" class="block text-center py-3 px-6 hover:text-accent">Contato</a>
+            <!-- <a href="#contato" class="block text-center py-3 px-6 hover:text-accent">Contato</a> -->
             <div class="p-4">
                  <a href="https://wa.me/5567981091382?text=Olá,%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="block w-full bg-accent text-white font-bold py-3 px-5 rounded-lg hover:bg-accent-hover text-center">Agendar Consulta</a>
             </div>
@@ -150,9 +153,33 @@
                         <p class="text-lg mb-4" style="color: var(--text-secondary-color); text-align: justify;">Atuo através das práticas baseadas em evidências, especialmente pela Terapia Cognitivo-Comportamental (TCC) e Terapias Contextuais, como a DBT. Atendo, principalmente, adolescentes e adultos, com um olhar atento às singularidades de cada trajetória, especialmente nos casos de neurodivergência.              
                         </p>
                         <p class="text-lg mb-4" style="color: var(--text-secondary-color); text-align: justify;">Meu trabalho é de forma colaborativa e empática para te ajudar a identificar padrões de pensamentos e comportamentos. Juntos, vamos desenvolver ferramentas práticas para que você possa lidar melhor com os desafios da vida.</p>
-                        <div class="mt-6 border-l-4 border-accent pl-4">
-                            <p style="color: var(--text-secondary-color);">Psicóloga e Neuropsicóloga</p>
-                            <p style="color: var(--text-secondary-color);">CRP 14/09498</p>
+                    <!-- Informações Profissionais Expandidas -->
+                        <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-accent">
+                            <h3 class="text-xl font-bold mb-4">Informações Profissionais</h3>
+                            <div class="grid md:grid-cols-[4fr_3fr] md:grid-cols-2 gap-4">
+                                <!-- Coluna 1: Formação acadêmica -->
+                                <div>
+                                    <!-- <i class="fas fa-brain text-accent"></i> -->
+                                  <p class="font-semibold text-accent">Formação acadêmica</p>
+                                  <p style="color: var(--text-secondary-color);">• Mestranda em Processos Cognitivos e comportamentais</p>
+                                  <p style="color: var(--text-secondary-color);">• Especialização psicoterapias baseadas em evidências: terapias cognitivo-comportamentais</p>
+                                  <p style="color: var(--text-secondary-color);">• Especialização em Neuropsicologia</p>
+                                </div>
+                              
+                                <!-- Coluna 2: wrapper com Formações + Registro -->
+                                <div class="flex flex-col gap-4">
+                                  <div>
+                                    <p class="font-semibold text-accent">Formações</p>
+                                    <p style="color: var(--text-secondary-color);">• Terapia cognitivo-comportamental (TCC)</p>
+                                    <p style="color: var(--text-secondary-color);">• Terapia comportamental dialética (DBT)</p>
+                                  </div>
+                                  <div>
+                                    <p class="font-semibold text-accent">Registro Profissional</p>
+                                    <p style="color: var(--text-secondary-color);">• CRP 14/09498</p>
+                                  </div>
+                                </div>
+                              </div>
+                              
                         </div>
                     </div>
                     <div class="md:col-span-2 flex justify-center">
@@ -350,9 +377,63 @@
             </div>
         </section>
 
+    <!-- 
+      LOCALIZAÇÃO SECTION
+    -->
+    <section id="localizacao" class="py-20 md:py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold">Localização</h2>
+                <p class="text-lg mt-2" style="color: var(--text-secondary-color);">Onde você pode me encontrar.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Consultório</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-map-marker-alt text-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Endereço</p>
+                                <p style="color: var(--text-secondary-color);">Rua Pernambuco, 806 - Bairro São Francisco</p>
+                                <p style="color: var(--text-secondary-color);">Campo Grande - MS</p>
+                                
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-clock text-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Horários de Atendimento</p>
+                                <p style="color: var(--text-secondary-color);">Segunda a Sexta: 8h às 18h</p>
+                                <!-- <p style="color: var(--text-secondary-color);">Sábado: 8h às 12h</p> -->
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-phone text-accent text-xl mt-1"></i>
+                            <div>
+                                <p class="font-semibold">Contato</p>
+                                <p style="color: var(--text-secondary-color);">(67) 98109-1382</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="https://wa.me/5567981091382?text=Olá,%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="bg-accent text-white font-bold py-3 px-6 rounded-lg hover:bg-accent-hover transition-colors inline-flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            Agendar pelo WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-200 h-96 rounded-2xl shadow-xl overflow-hidden items-center justify-center">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.365717263067!2d-54.610395!3d-20.450167000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9486e7d9945c4af3%3A0x287eb78d71e51975!2sPsic%C3%B3loga%20e%20Neuropsicol%C3%B3ga%20-%20Gabriela%20Arakaki!5e0!3m2!1spt-BR!2sbr!4v1752501785363!5m2!1spt-BR!2sbr" class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>        
         <!-- 
-          LOCALIZAÇÃO SECTION
-        -->
+          LOCALIZAÇÃO SECTION (antiga)
+        
         <section id="localizacao" class="py-20 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -365,7 +446,7 @@
                 </div>
             </div>
         </section>
-
+        -->
     <!-- 
       FOOTER
     -->
