@@ -187,7 +187,7 @@
                 </div>
             </div>
         </section>
-        
+<!--         
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 // Seleciona os botões e os conteúdos
@@ -254,7 +254,7 @@
                 handleLayout();
                 window.addEventListener('resize', handleLayout);
             });
-            </script>
+            </script> -->
 
 
         <!-- 
@@ -429,55 +429,159 @@
     <!-- Swiper.js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+    <!-- JavaScript -->
     <script>
-        // Script para o menu mobile
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
+        // Menu Mobile
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
-        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
-        for (let link of mobileMenuLinks) {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        }
 
-        // Script para o carrossel de depoimentos (Swiper)
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
+        // Tabs do "Como Funciona"
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggles = document.querySelectorAll('.service-toggle');
+            const contents = document.querySelectorAll('.service-content');
+            const contentContainer = document.getElementById('content-container');
+            const DESKTOP_BREAKPOINT = 768;
+            let isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+
+            // Initialize layout once
+            const initializeLayout = () => {
+                toggles.forEach(toggle => {
+                    toggle.classList.remove('active', 'border-accent', 'bg-light-accent');
+                    toggle.style.borderColor = 'transparent';
+                    
+                    const targetContent = document.getElementById(toggle.dataset.target);
+                    if (isDesktop) {
+                        contentContainer.appendChild(targetContent);
+                    } else {
+                        // In mobile, keep content in its original position
+                        if (targetContent.parentElement !== toggle.parentElement) {
+                            toggle.parentElement.appendChild(targetContent);
+                        }
+                    }
+                });
+                
+                contents.forEach(content => content.classList.add('hidden'));
+            };
+
+            // Handle tab switching
+            const handleTabClick = (clickedToggle) => {
+                const targetId = clickedToggle.dataset.target;
+                const targetContent = document.getElementById(targetId);
+                const wasActive = clickedToggle.classList.contains('active');
+                
+                // Close all tabs
+                toggles.forEach(t => {
+                    t.classList.remove('active', 'border-accent', 'bg-light-accent');
+                    if (isDesktop) t.style.borderColor = 'transparent';
+                });
+                contents.forEach(c => c.classList.add('hidden'));
+
+                // Open clicked tab if it wasn't active
+                if (!wasActive) {
+                    clickedToggle.classList.add('active');
+                    targetContent.classList.remove('hidden');
+                    
+                    if (isDesktop) {
+                        clickedToggle.style.borderColor = 'var(--accent-color)';
+                    } else {
+                        clickedToggle.classList.add('bg-light-accent');
+                    }
                 }
+            };
+
+            // Add event listeners with proper touch handling
+            toggles.forEach(toggle => {
+                let touchStartY = 0;
+                let touchEndY = 0;
+                
+                toggle.addEventListener('touchstart', (e) => {
+                    touchStartY = e.touches[0].clientY;
+                }, { passive: true });
+                
+                toggle.addEventListener('touchend', (e) => {
+                    touchEndY = e.changedTouches[0].clientY;
+                    const touchDiff = Math.abs(touchStartY - touchEndY);
+                    
+                    // Only trigger if it's a tap (not a scroll)
+                    if (touchDiff < 10) {
+                        e.preventDefault();
+                        handleTabClick(toggle);
+                    }
+                });
+                
+                toggle.addEventListener('click', (e) => {
+                    // Prevent double triggering on mobile
+                    if (e.type === 'click' && 'ontouchstart' in window) {
+                        return;
+                    }
+                    handleTabClick(toggle);
+                });
+            });
+
+            // Handle resize
+            const handleResize = () => {
+                const newIsDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+                if (newIsDesktop !== isDesktop) {
+                    isDesktop = newIsDesktop;
+                    initializeLayout();
+                    // Reactivate first tab
+                    if (toggles.length > 0) {
+                        handleTabClick(toggles[0]);
+                    }
+                }
+            };
+
+            // Initialize
+            initializeLayout();
+            if (toggles.length > 0) {
+                handleTabClick(toggles[0]);
             }
+            
+            window.addEventListener('resize', handleResize);
         });
 
-        // Script para o acordeão de Serviços ("Como Funciona")
-        const serviceItems = document.querySelectorAll('.service-item');
-        serviceItems.forEach(item => {
-            const question = item.querySelector('.service-question');
-            const answer = item.querySelector('.service-answer');
-            const arrow = item.querySelector('.service-arrow');
-
-            question.addEventListener('click', () => {
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Toggle current answer
                 answer.classList.toggle('hidden');
-                arrow.classList.toggle('rotate-180');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+                
+                // Close other answers
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer) {
+                        otherAnswer.classList.add('hidden');
+                        const otherIcon = otherAnswer.previousElementSibling.querySelector('i');
+                        otherIcon.classList.remove('fa-chevron-up');
+                        otherIcon.classList.add('fa-chevron-down');
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                }
             });
         });
     </script>
-
 </body>
 </html>
-    
