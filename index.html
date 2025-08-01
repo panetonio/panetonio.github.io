@@ -65,7 +65,7 @@
         <section id="inicio" class="container mx-auto px-6 py-20 md:py-32">
             <div class="grid grid-cols-1 md:grid-cols-2 md:grid-cols-[2fr_3fr] gap-12 items-center">
                 <div class="flex justify-center">
-                    <img src="public/fotos/gabi-square.jpg" alt="Foto da psicóloga Gabriela Arakaki" class="rounded-full w-80 h-80 md:w-96 md:h-96 object-cover shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/500x500/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
+                    <img src="public/fotos/gabi-tall.jpg" alt="Foto da psicóloga Gabriela Arakaki" class="rounded-full w-80 h-80 md:w-96 md:h-96 object-cover shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/500x500/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
                 </div>
                 <div class="text-center md:text-right">
                     <h1 class="text-5xl md:text-5xl font-bold leading-tight">Conhecer sua mente é o primeiro passo para transformá-la</h1>
@@ -121,7 +121,7 @@
                         </div>
                     </div>
                     <div class="md:col-span-2 flex justify-center">
-                        <img src="public/fotos/gabi-tall.jpg" alt="Gabriela Arakaki em um ambiente profissional" class="rounded-2xl w-full max-w-sm object-cover shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/500x600/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
+                        <img src="public/fotos/gabi-square.jpg" alt="Gabriela Arakaki em um ambiente profissional" class="rounded-2xl w-full max-w-sm object-cover shadow-xl" onerror="this.onerror=null;this.src='https://placehold.co/500x600/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
                     </div>
                 </div>
             </div>
@@ -130,62 +130,129 @@
        <!-- 
           COMO FUNCIONA SECTION (CORRIGIDA)
         -->
-        <section id="como-funciona" class="py-20 md:py-24">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold">Como Funciona</h2>
-                    <p class="text-lg mt-2" style="color: var(--text-secondary-color);">Entenda o passo a passo de cada serviço.</p>
-                </div>
-                
-                <!-- Abas de Navegação -->
-                <div id="tabs-container" class="flex flex-col md:flex-row justify-center mb-4 md:mb-10 md:border-b-2 md:border-gray-200">
-                    <button data-target="psicoterapia" class="service-toggle text-3xl font-semibold py-4 px-6 md:px-8 transition-all w-full text-left md:w-auto md:text-center md:border-b-4 border-transparent" style="font-family: var(--font-main);">
-                        Psicoterapia
-                    </button>
-                    <button data-target="avaliacao" class="service-toggle text-3xl font-semibold py-4 px-6 md:px-8 transition-all w-full text-left md:w-auto md:text-center md:border-b-4 border-transparent" style="font-family: var(--font-main);">
-                        Avaliação Neuropsicológica
-                    </button>
-                    <button data-target="orientacao" class="service-toggle text-3xl font-semibold py-4 px-6 md:px-8 transition-all w-full text-left md:w-auto md:text-center md:border-b-4 border-transparent" style="font-family: var(--font-main);">
-                        Orientação Vocacional
-                    </button>
-                </div>
+   <section id="como-funciona" class="py-20 md:py-24">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold">Como Funciona</h2>
+            <p class="text-lg mt-2" style="color: var(--text-secondary-color);">Entenda o passo a passo de cada serviço.</p>
+        </div>
 
-                <!-- Conteúdo das Abas -->
-                <div id="content-container" class="max-w-6xl mx-auto">
-                    <!-- Conteúdo Psicoterapia -->
-                    <div id="psicoterapia" class="service-content hidden">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 p-4 md:p-0">
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">1.</div><div><h3 class="text-xl font-bold mb-1">Agendamento e acolhimento inicial</h3><p style="color: var(--text-secondary-color);">No primeiro contato, você agenda uma sessão. É um momento de escuta, acolhimento e de entender o que está te trazendo à terapia.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">2.</div><div><h3 class="text-xl font-bold mb-1">Construção do vínculo</h3><p style="color: var(--text-secondary-color);">Nos primeiros encontros, começamos a criar uma relação de confiança. Esse vínculo é a base para um trabalho terapêutico seguro e potente.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">3.</div><div><h3 class="text-xl font-bold mb-1">Definição de objetivos</h3><p style="color: var(--text-secondary-color);">A partir das suas queixas e necessidades, traçamos juntos os objetivos terapêuticos – que podem ir sendo ajustados ao longo do processo.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">4.</div><div><h3 class="text-xl font-bold mb-1">Encontros semanais ou quinzenais</h3><p style="color: var(--text-secondary-color);">As sessões têm duração média de 50 minutos e ocorrem com frequência combinada. Cada encontro é um espaço para reflexão, expressão e elaboração.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">5.</div><div><h3 class="text-xl font-bold mb-1">Caminho não linear</h3><p style="color: var(--text-secondary-color);">A terapia não é uma linha reta. Há semanas mais leves e outras mais intensas. O importante é manter o compromisso com o processo.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">6.</div><div><h3 class="text-xl font-bold mb-1">Avaliações pontuais de progresso</h3><p style="color: var(--text-secondary-color);">Periodicamente, revisamos juntos o que avançou, o que ainda incomoda e o que pode ser ressignificado ou ajustado.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">7.</div><div><h3 class="text-xl font-bold mb-1">Encerramento planejado</h3><p style="color: var(--text-secondary-color);">Quando os objetivos forem alcançados (ou se houver uma pausa), o encerramento é conversado com cuidado, respeitando o seu tempo e momento.</p></div></div>
-                        </div>
+        <!-- ================================================== -->
+        <!-- VERSÃO DESKTOP: ABAS (Visível em telas 'md' e maiores) -->
+        <!-- ================================================== -->
+        <div id="tabs-desktop" class="hidden md:block">
+            <!-- Botões das Abas -->
+            <div class="flex justify-center mb-10 border-b-2 border-gray-200">
+                <button data-target="psicoterapia-desktop" class="tab-btn active-tab text-2xl font-semibold py-4 px-8 transition-all border-b-4 border-accent" style="font-family: var(--font-main);">
+                    Psicoterapia
+                </button>
+                <button data-target="avaliacao-desktop" class="tab-btn text-2xl font-semibold py-4 px-8 transition-all border-b-4 border-transparent text-gray-500 hover:border-gray-300" style="font-family: var(--font-main);">
+                    Avaliação Neuropsicológica
+                </button>
+                <button data-target="orientacao-desktop" class="tab-btn text-2xl font-semibold py-4 px-8 transition-all border-b-4 border-transparent text-gray-500 hover:border-gray-300" style="font-family: var(--font-main);">
+                    Orientação Vocacional
+                </button>
+            </div>
+
+            <!-- Conteúdo das Abas -->
+            <div class="max-w-6xl mx-auto">
+                <!-- Conteúdo Psicoterapia -->
+                <div id="psicoterapia-desktop" class="tab-content">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 p-4">
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">1.</div><div><h3 class="text-xl font-bold mb-1">Agendamento e acolhimento inicial</h3><p style="color: var(--text-secondary-color);">No primeiro contato, você agenda uma sessão. É um momento de escuta, acolhimento e de entender o que está te trazendo à terapia.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">2.</div><div><h3 class="text-xl font-bold mb-1">Construção do vínculo</h3><p style="color: var(--text-secondary-color);">Nos primeiros encontros, começamos a criar uma relação de confiança. Esse vínculo é a base para um trabalho terapêutico seguro e potente.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">3.</div><div><h3 class="text-xl font-bold mb-1">Definição de objetivos</h3><p style="color: var(--text-secondary-color);">A partir das suas queixas e necessidades, traçamos juntos os objetivos terapêuticos – que podem ir sendo ajustados ao longo do processo.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">4.</div><div><h3 class="text-xl font-bold mb-1">Encontros semanais ou quinzenais</h3><p style="color: var(--text-secondary-color);">As sessões têm duração média de 50 minutos e ocorrem com frequência combinada. Cada encontro é um espaço para reflexão, expressão e elaboração.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">5.</div><div><h3 class="text-xl font-bold mb-1">Caminho não linear</h3><p style="color: var(--text-secondary-color);">A terapia não é uma linha reta. Há semanas mais leves e outras mais intensas. O importante é manter o compromisso com o processo.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">6.</div><div><h3 class="text-xl font-bold mb-1">Avaliações pontuais de progresso</h3><p style="color: var(--text-secondary-color);">Periodicamente, revisamos juntos o que avançou, o que ainda incomoda e o que pode ser ressignificado ou ajustado.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">7.</div><div><h3 class="text-xl font-bold mb-1">Encerramento planejado</h3><p style="color: var(--text-secondary-color);">Quando os objetivos forem alcançados (ou se houver uma pausa), o encerramento é conversado com cuidado, respeitando o seu tempo e momento.</p></div></div>
                     </div>
-                    <div id="avaliacao" class="service-content hidden">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 p-4 md:p-0">
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">1.</div><div><h3 class="text-xl font-bold mb-1">Agendamento e primeira conversa</h3><p style="color: var(--text-secondary-color);">Você entra em contato relatando a demanda ou queixa principal. A partir disso, avaliamos se a avaliação neuropsicológica é indicada e explicamos como funciona o processo.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">2.</div><div><h3 class="text-xl font-bold mb-1">Entrevista inicial (anamnese)</h3><p style="color: var(--text-secondary-color);">Fazemos uma conversa detalhada com o paciente ou responsável para entender o histórico, os contextos emocional, escolar, familiar e médico.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">3.</div><div><h3 class="text-xl font-bold mb-1">Aplicação de testes e tarefas cognitivas</h3><p style="color: var(--text-secondary-color);">São aplicados instrumentos que avaliam funções como atenção, memória, linguagem, raciocínio, funções executivas e aspectos emocionais. O número de sessões varia de acordo com a complexidade da demanda e o ritmo da pessoa.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">4.</div><div><h3 class="text-xl font-bold mb-1">Análise dos dados</h3><p style="color: var(--text-secondary-color);">Todos os resultados são interpretados de forma integrada, ou seja, não apenas os resultados dos testes, mas considerando o contexto, a escuta clínica e as observações comportamentais.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">5.</div><div><h3 class="text-xl font-bold mb-1">Elaboração do relatório</h3><p style="color: var(--text-secondary-color);">É produzido um documento detalhado com os resultados, interpretações e recomendações específicas para cada caso.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">6.</div><div><h3 class="text-xl font-bold mb-1">Devolutiva</h3><p style="color: var(--text-secondary-color);">Em uma sessão dedicada, explicamos os resultados de forma clara e acessível, tirando dúvidas e orientando sobre os próximos passos.</p></div></div>
-                        </div>
+                </div>
+                <!-- Conteúdo Avaliação -->
+                <div id="avaliacao-desktop" class="tab-content hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 p-4">
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">1.</div><div><h3 class="text-xl font-bold mb-1">Agendamento e primeira conversa</h3><p style="color: var(--text-secondary-color);">Você entra em contato relatando a demanda ou queixa principal. A partir disso, avaliamos se a avaliação neuropsicológica é indicada e explicamos como funciona o processo.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">2.</div><div><h3 class="text-xl font-bold mb-1">Entrevista inicial (anamnese)</h3><p style="color: var(--text-secondary-color);">Fazemos uma conversa detalhada com o paciente ou responsável para entender o histórico, os contextos emocional, escolar, familiar e médico.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">3.</div><div><h3 class="text-xl font-bold mb-1">Aplicação de testes e tarefas cognitivas</h3><p style="color: var(--text-secondary-color);">São aplicados instrumentos que avaliam funções como atenção, memória, linguagem, raciocínio, funções executivas e aspectos emocionais. O número de sessões varia de acordo com a complexidade da demanda e o ritmo da pessoa.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">4.</div><div><h3 class="text-xl font-bold mb-1">Análise dos dados</h3><p style="color: var(--text-secondary-color);">Todos os resultados são interpretados de forma integrada, ou seja, não apenas os resultados dos testes, mas considerando o contexto, a escuta clínica e as observações comportamentais.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">5.</div><div><h3 class="text-xl font-bold mb-1">Elaboração do relatório</h3><p style="color: var(--text-secondary-color);">É produzido um documento detalhado com os resultados, interpretações e recomendações específicas para cada caso.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">6.</div><div><h3 class="text-xl font-bold mb-1">Devolutiva</h3><p style="color: var(--text-secondary-color);">Em uma sessão dedicada, explicamos os resultados de forma clara e acessível, tirando dúvidas e orientando sobre os próximos passos.</p></div></div>
                     </div>
-                    <div id="orientacao" class="service-content hidden">
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 p-4 md:p-0">
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">1.</div><div><h3 class="text-xl font-bold mb-1">Conversa inicial</h3><p style="color: var(--text-secondary-color);">Entendemos suas dúvidas, expectativas e o momento de vida em que você se encontra em relação às escolhas profissionais.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">2.</div><div><h3 class="text-xl font-bold mb-1">Autoconhecimento</h3><p style="color: var(--text-secondary-color);">Exploramos seus interesses, habilidades, valores e características de personalidade através de dinâmicas e reflexões.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">3.</div><div><h3 class="text-xl font-bold mb-1">Exploração de carreiras</h3><p style="color: var(--text-secondary-color);">Investigamos diferentes áreas profissionais, cursos e mercado de trabalho, sempre conectando com seu perfil.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">4.</div><div><h3 class="text-xl font-bold mb-1">Aplicação de testes</h3><p style="color: var(--text-secondary-color);">Utilizamos instrumentos específicos para avaliar interesses profissionais e características vocacionais.</p></div></div>
-                            <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">5.</div><div><h3 class="text-xl font-bold mb-1">Síntese e planejamento</h3><p style="color: var(--text-secondary-color);">Integramos todas as informações coletadas e construímos juntos um plano de ação para suas escolhas profissionais.</p></div></div>
-                        </div>
+                </div>
+                <!-- Conteúdo Orientação -->
+                <div id="orientacao-desktop" class="tab-content hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 p-4">
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">1.</div><div><h3 class="text-xl font-bold mb-1">Conversa inicial</h3><p style="color: var(--text-secondary-color);">Entendemos suas dúvidas, expectativas e o momento de vida em que você se encontra em relação às escolhas profissionais.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">2.</div><div><h3 class="text-xl font-bold mb-1">Autoconhecimento</h3><p style="color: var(--text-secondary-color);">Exploramos seus interesses, habilidades, valores e características de personalidade através de dinâmicas e reflexões.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">3.</div><div><h3 class="text-xl font-bold mb-1">Exploração de carreiras</h3><p style="color: var(--text-secondary-color);">Investigamos diferentes áreas profissionais, cursos e mercado de trabalho, sempre conectando com seu perfil.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">4.</div><div><h3 class="text-xl font-bold mb-1">Aplicação de testes</h3><p style="color: var(--text-secondary-color);">Utilizamos instrumentos específicos para avaliar interesses profissionais e características vocacionais.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">5.</div><div><h3 class="text-xl font-bold mb-1">Síntese e planejamento</h3><p style="color: var(--text-secondary-color);">Integramos todas as informações coletadas e construímos juntos um plano de ação para suas escolhas profissionais.</p></div></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- ================================================== -->
+        <!-- VERSÃO MOBILE: ACCORDION (Visível abaixo de 'md') -->
+        <!-- ================================================== -->
+        <div id="accordion-mobile" class="md:hidden space-y-4">
+            <!-- Item Accordion Psicoterapia -->
+            <div class="border border-gray-200 rounded-lg">
+                <button class="accordion-btn w-full text-left p-4 font-bold text-xl flex justify-between items-center hover:bg-light-accent transition-colors"style="font-family: var(--font-main);">
+                    <span>Psicoterapia</span>
+                    <svg class="accordion-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content hidden p-4 pt-0">
+                    <div class="space-y-6">
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">1.</span> Agendamento e acolhimento inicial</h3><p style="color: var(--text-secondary-color);">No primeiro contato, você agenda uma sessão. É um momento de escuta, acolhimento e de entender o que está te trazendo à terapia.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">2.</span> Construção do vínculo</h3><p style="color: var(--text-secondary-color);">Nos primeiros encontros, começamos a criar uma relação de confiança. Esse vínculo é a base para um trabalho terapêutico seguro e potente.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">3.</span> Definição de objetivos</h3><p style="color: var(--text-secondary-color);">A partir das suas queixas e necessidades, traçamos juntos os objetivos terapêuticos.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">4.</span> Encontros semanais ou quinzenais</h3><p style="color: var(--text-secondary-color);">As sessões têm duração média de 50 minutos e ocorrem com frequência combinada.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">5.</span> Caminho não linear</h3><p style="color: var(--text-secondary-color);">A terapia não é uma linha reta. O importante é manter o compromisso com o processo.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent"> 6.</span> Avaliações pontuais de progresso</h3><p style="color: var(--text-secondary-color);">Periodicamente, revisamos juntos o que avançou e o que pode ser ajustado.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">7.</span> Encerramento planejado</h3><p style="color: var(--text-secondary-color);">Quando os objetivos forem alcançados, o encerramento é conversado com cuidado.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item Accordion Avaliação -->
+            <div class="border border-gray-200 rounded-lg">
+                <button class="accordion-btn w-full text-left p-4 font-bold text-xl flex justify-between items-center hover:bg-light-accent transition-colors" style="font-family: var(--font-main);">
+                    <span>Avaliação Neuropsicológica</span>
+                    <svg class="accordion-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content hidden p-4 pt-0">
+                    <div class="space-y-6">
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">1.</span> Agendamento e primeira conversa</h3><p style="color: var(--text-secondary-color);">Avaliamos se a avaliação neuropsicológica é indicada e explicamos como funciona o processo.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">2.</span> Entrevista inicial (anamnese)</h3><p style="color: var(--text-secondary-color);">Fazemos uma conversa detalhada para entender o histórico e os contextos do paciente.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">3.</span> Aplicação de testes e tarefas</h3><p style="color: var(--text-secondary-color);">São aplicados instrumentos que avaliam funções como atenção, memória, linguagem, etc.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">4.</span> Análise dos dados</h3><p style="color: var(--text-secondary-color);">Todos os resultados são interpretados de forma integrada, considerando todo o contexto.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">5.</span> Elaboração do relatório</h3><p style="color: var(--text-secondary-color);">É produzido um documento detalhado com os resultados, interpretações e recomendações.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">6.</span> Devolutiva</h3><p style="color: var(--text-secondary-color);">Explicamos os resultados de forma clara e acessível, tirando dúvidas e orientando.</p></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item Accordion Orientação -->
+            <div class="border border-gray-200 rounded-lg">
+                <button class="accordion-btn w-full text-left p-4 font-bold text-xl flex justify-between items-center hover:bg-light-accent transition-colors" style="font-family: var(--font-main);">
+                    <span>Orientação Vocacional</span>
+                    <svg class="accordion-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content hidden p-4 pt-0">
+                   <div class="space-y-6">
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">1.</span> Conversa inicial</h3><p style="color: var(--text-secondary-color);">Entendemos suas dúvidas, expectativas e o momento de vida em relação às escolhas profissionais.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">2.</span> Autoconhecimento</h3><p style="color: var(--text-secondary-color);">Exploramos seus interesses, habilidades, valores e características de personalidade.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">3.</span> Exploração de carreiras</h3><p style="color: var(--text-secondary-color);">Investigamos diferentes áreas profissionais, cursos e mercado de trabalho.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">4.</span> Aplicação de testes</h3><p style="color: var(--text-secondary-color);">Utilizamos instrumentos específicos para avaliar interesses profissionais.</p></div>
+                        <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">5.</span> Síntese e planejamento</h3><p style="color: var(--text-secondary-color);">Integramos as informações e construímos juntos um plano de ação para suas escolhas.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 
         <!-- 
@@ -372,7 +439,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                 </a>
             </div>
-            <p class="text-sm text-stone-400 mt-8">© 2024 Gabriela Arakaki. Todos os direitos reservados.</p>
+            <p class="text-sm text-stone-400 mt-8">© 2025 Gabriela Arakaki. Todos os direitos reservados.</p>
             <p class="text-xs text-stone-400 mt-2">Desenvolvido com ❤️ por Luiz Miguel</p>
         </div>
     </footer>
@@ -390,95 +457,61 @@
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
+    
+            // --- Lógica para as Abas (Desktop) ---
+            const tabsContainer = document.getElementById('tabs-desktop');
+            if (tabsContainer) {
+                const tabButtons = tabsContainer.querySelectorAll('.tab-btn');
+                const tabContents = tabsContainer.querySelectorAll('.tab-content');
 
-            // Service toggle functionality (Como Funciona section)
-            const serviceToggles = document.querySelectorAll('.service-toggle');
-            const serviceContents = document.querySelectorAll('.service-content');
-            const contentContainer = document.getElementById('content-container');
-            
-            // Função para detectar se é mobile
-            const isMobile = () => window.innerWidth < 768;
-            
-            // Função para configurar o layout inicial
-            const setupLayout = () => {
-                if (isMobile()) {
-                    // Mobile: acordeão - todos os conteúdos ficam ocultos inicialmente
-                    serviceContents.forEach(content => {
-                        content.classList.add('hidden');
-                        // Move o conteúdo para depois do botão correspondente
-                        const targetButton = document.querySelector(`[data-target="${content.id}"]`);
-                        if (targetButton && targetButton.nextElementSibling !== content) {
-                            targetButton.insertAdjacentElement('afterend', content);
-                        }
-                    });
-                    serviceToggles.forEach(toggle => {
-                        toggle.classList.remove('active', 'border-accent', 'bg-light-accent');
-                        toggle.style.borderColor = 'transparent';
-                    });
-                } else {
-                    // Desktop: abas - move todos os conteúdos para o container e mostra o primeiro
-                    serviceContents.forEach(content => {
-                        contentContainer.appendChild(content);
-                        content.classList.add('hidden');
-                    });
-                    serviceToggles.forEach(toggle => {
-                        toggle.classList.remove('active', 'border-accent', 'bg-light-accent');
-                        toggle.style.borderColor = 'transparent';
-                    });
-                    // Ativa a primeira aba
-                    if (serviceToggles.length > 0 && serviceContents.length > 0) {
-                        serviceToggles[0].classList.add('active', 'border-accent');
-                        serviceToggles[0].style.borderColor = 'var(--accent-color)';
-                        serviceContents[0].classList.remove('hidden');
-                    }
-                }
-            };
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const targetId = button.dataset.target;
+                        const targetContent = document.getElementById(targetId);
 
-            // Função para lidar com cliques nos toggles
-            const handleToggleClick = (event) => {
-                event.preventDefault();
-                const targetId = event.currentTarget.dataset.target;
-                const targetContent = document.getElementById(targetId);
-                
-                if (isMobile()) {
-                    // Mobile: comportamento de acordeão
-                    const isCurrentlyOpen = !targetContent.classList.contains('hidden');
-                    
-                    // Fecha todos os outros acordeões
-                    serviceContents.forEach(content => {
-                        if (content !== targetContent) {
+                        // Remove a classe ativa de todos os botões e conteúdos
+                        tabButtons.forEach(btn => {
+                            btn.classList.remove('active-tab', 'border-accent');
+                            btn.classList.add('text-gray-500', 'hover:border-gray-300', 'border-transparent');
+                        });
+                        tabContents.forEach(content => {
                             content.classList.add('hidden');
+                        });
+
+                        // Adiciona a classe ativa ao botão clicado e ao seu conteúdo
+                        button.classList.add('active-tab', 'border-accent');
+                        button.classList.remove('text-gray-500', 'hover:border-gray-300', 'border-transparent');
+                        if (targetContent) {
+                            targetContent.classList.remove('hidden');
                         }
                     });
-                    serviceToggles.forEach(toggle => {
-                        if (toggle !== event.currentTarget) {
-                            toggle.classList.remove('active', 'bg-light-accent');
-                        }
+                });
+            }
+
+            // --- Lógica para o Accordion (Mobile) ---
+            const accordionContainer = document.getElementById('accordion-mobile');
+            if (accordionContainer) {
+                const accordionButtons = accordionContainer.querySelectorAll('.accordion-btn');
+
+                accordionButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const content = button.nextElementSibling;
+                        const arrow = button.querySelector('.accordion-arrow');
+
+                        // Fecha todos os outros accordions abertos
+                        accordionButtons.forEach(otherButton => {
+                            if (otherButton !== button) {
+                                otherButton.nextElementSibling.classList.add('hidden');
+                                otherButton.querySelector('.accordion-arrow').classList.remove('rotate-180');
+                            }
+                        });
+
+                        // Abre ou fecha o accordion clicado
+                        content.classList.toggle('hidden');
+                        arrow.classList.toggle('rotate-180');
                     });
-                    
-                    // Toggle do acordeão atual
-                    if (isCurrentlyOpen) {
-                        targetContent.classList.add('hidden');
-                        event.currentTarget.classList.remove('active', 'bg-light-accent');
-                    } else {
-                        targetContent.classList.remove('hidden');
-                        event.currentTarget.classList.add('active', 'bg-light-accent');
-                    }
-                } else {
-                    // Desktop: comportamento de abas
-                    serviceToggles.forEach(toggle => {
-                        toggle.classList.remove('active', 'border-accent');
-                        toggle.style.borderColor = 'transparent';
-                    });
-                    serviceContents.forEach(content => {
-                        content.classList.add('hidden');
-                    });
-                    
-                    event.currentTarget.classList.add('active', 'border-accent');
-                    event.currentTarget.style.borderColor = 'var(--accent-color)';
-                    targetContent.classList.remove('hidden');
-                }
-            };
+                });
+            }
 
             // Adiciona event listeners
             serviceToggles.forEach(toggle => {
