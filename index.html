@@ -437,13 +437,16 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Tabs do "Como Funciona"
+        // Tabs do "Como Funciona" - FIXED VERSION
         document.addEventListener('DOMContentLoaded', () => {
             const toggles = document.querySelectorAll('.service-toggle');
             const contents = document.querySelectorAll('.service-content');
             const contentContainer = document.getElementById('content-container');
             const DESKTOP_BREAKPOINT = 768;
             let isDesktop = window.innerWidth >= DESKTOP_BREAKPOINT;
+            let touchStartY = 0;
+            let touchStartX = 0;
+            let isDragging = false;
 
             // Initialize layout once
             const initializeLayout = () => {
@@ -465,49 +468,95 @@
                 contents.forEach(content => content.classList.add('hidden'));
             };
 
-            // Handle tab switching
+            // Handle tab/accordion switching
             const handleTabClick = (clickedToggle) => {
                 const targetId = clickedToggle.dataset.target;
                 const targetContent = document.getElementById(targetId);
                 const wasActive = clickedToggle.classList.contains('active');
                 
-                // Close all tabs
-                toggles.forEach(t => {
-                    t.classList.remove('active', 'border-accent', 'bg-light-accent');
-                    if (isDesktop) t.style.borderColor = 'transparent';
-                });
-                contents.forEach(c => c.classList.add('hidden'));
+                if (isDesktop) {
+                    // Desktop: Tab behavior (only one open at a time)
+                    toggles.forEach(t => {
+                        t.classList.remove('active', 'border-accent');
+                        t.style.borderColor = 'transparent';
+                    });
+                    contents.forEach(c => c.classList.add('hidden'));
 
-                // Open clicked tab if it wasn't active
-                if (!wasActive) {
-                    clickedToggle.classList.add('active');
-                    targetContent.classList.remove('hidden');
-                    
-                    if (isDesktop) {
+                    if (!wasActive) {
+                        clickedToggle.classList.add('active');
+                        targetContent.classList.remove('hidden');
                         clickedToggle.style.borderColor = 'var(--accent-color)';
+                    }
+                } else {
+                    // Mobile: Accordion behavior (multiple can be open)
+                    if (wasActive) {
+                        // Close this section
+                        clickedToggle.classList.remove('active', 'bg-light-accent');
+                        targetContent.classList.add('hidden');
                     } else {
-                        clickedToggle.classList.add('bg-light-accent');
+                        // Open this section
+                        clickedToggle.classList.add('active', 'bg-light-accent');
+                        targetContent.classList.remove('hidden');
                     }
                 }
             };
 
+            // Prevent accidental clicks during scroll gestures
+            const handleTouchStart = (e, toggle) => {
+                touchStartY = e.touches[0].clientY;
+                touchStartX = e.touches[0].clientX;
+                isDragging = false;
+            };
+
+            const handleTouchMove = (e) => {
+                if (!touchStartY || !touchStartX) return;
+                
+                const touchEndY = e.touches[0].clientY;
+                const touchEndX = e.touches[0].clientX;
+                const diffY = Math.abs(touchEndY - touchStartY);
+                const diffX = Math.abs(touchEndX - touchStartX);
+                
+                // If movement is significant, consider it a scroll/drag gesture
+                if (diffY > 10 || diffX > 10) {
+                    isDragging = true;
+                }
+            };
+
+            const handleTouchEnd = (e, toggle) => {
+                // Only trigger click if it wasn't a drag/scroll gesture
+                if (!isDragging) {
+                    e.preventDefault();
+                    handleTabClick(toggle);
+                }
+                
+                // Reset tracking variables
+                touchStartY = 0;
+                touchStartX = 0;
+                isDragging = false;
+            };
+
             // Add event listeners with proper touch handling
             toggles.forEach(toggle => {
-                let touchStartY = 0;
-                let touchEndY = 0;
-                
-                toggle.addEventListener('click', (e) => {
-                    handleTabClick(toggle);
-                });
+                if ('ontouchstart' in window) {
+                    // Touch devices: use touch events to better control behavior
+                    toggle.addEventListener('touchstart', (e) => handleTouchStart(e, toggle), { passive: false });
+                    toggle.addEventListener('touchmove', handleTouchMove, { passive: false });
+                    toggle.addEventListener('touchend', (e) => handleTouchEnd(e, toggle), { passive: false });
+                } else {
+                    // Non-touch devices: use click
+                    toggle.addEventListener('click', () => handleTabClick(toggle));
+                }
+            });
 
+            // Prevent content area touches from triggering toggle clicks
+            contents.forEach(content => {
+                content.addEventListener('touchstart', (e) => {
+                    e.stopPropagation();
+                }, { passive: true });
                 
-                toggle.addEventListener('click', (e) => {
-                    // Prevent double triggering on mobile
-                    if (e.type === 'click' && 'ontouchstart' in window) {
-                        return;
-                    }
-                    handleTabClick(toggle);
-                });
+                content.addEventListener('touchmove', (e) => {
+                    e.stopPropagation();
+                }, { passive: true });
             });
 
             // Handle resize
@@ -516,8 +565,8 @@
                 if (newIsDesktop !== isDesktop) {
                     isDesktop = newIsDesktop;
                     initializeLayout();
-                    // Reactivate first tab
-                    if (toggles.length > 0) {
+                    // Reactivate first tab only on desktop
+                    if (toggles.length > 0 && isDesktop) {
                         handleTabClick(toggles[0]);
                     }
                 }
@@ -525,7 +574,8 @@
 
             // Initialize
             initializeLayout();
-            if (toggles.length > 0) {
+            if (toggles.length > 0 && isDesktop) {
+                // Only auto-open first tab on desktop
                 handleTabClick(toggles[0]);
             }
             
