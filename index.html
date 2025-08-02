@@ -300,7 +300,7 @@
             </div>
         </section>
 
-<!-- 
+        <!-- 
           FAQ SECTION
         -->
         <section id="faq" class="py-20 md:py-24">
@@ -448,16 +448,18 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <!-- JavaScript -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
             // Mobile menu toggle
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
 
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-    
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
             // --- Lógica para as Abas (Desktop) ---
             const tabsContainer = document.getElementById('tabs-desktop');
             if (tabsContainer) {
@@ -513,12 +515,7 @@
                 });
             }
 
-            // Adiciona event listeners
-            serviceToggles.forEach(toggle => {
-                toggle.addEventListener('click', handleToggleClick);
-            });
-
-            // FAQ toggle functionality
+            // FAQ toggle functionality - FIXED VERSION
             const faqToggles = document.querySelectorAll('.faq-toggle');
             faqToggles.forEach(toggle => {
                 toggle.addEventListener('click', () => {
@@ -526,44 +523,47 @@
                     const targetContent = document.getElementById(targetId);
                     const arrow = toggle.querySelector('svg');
                     
-                    targetContent.classList.toggle('hidden');
-                    arrow.classList.toggle('rotate-180');
+                    if (targetContent && arrow) {
+                        targetContent.classList.toggle('hidden');
+                        arrow.classList.toggle('rotate-180');
+                    }
                 });
             });
 
-            // Swiper initialization
-            const swiper = new Swiper('.testimonials-swiper', {
-                loop: true,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                autoplay: {
-                    delay: 5000,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 40,
-                    },
-                    1024: {
-                        slidesPerView: 1,
-                        spaceBetween: 50,
-                    },
-                },
-            });
-
-            // Configuração inicial e listener para mudanças de tamanho
-            setupLayout();
-            window.addEventListener('resize', setupLayout);
+            // Swiper initialization - only if Swiper exists
+            if (typeof Swiper !== 'undefined') {
+                const swiperElement = document.querySelector('.testimonials-swiper');
+                if (swiperElement) {
+                    const swiper = new Swiper('.testimonials-swiper', {
+                        loop: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        autoplay: {
+                            delay: 5000,
+                        },
+                        breakpoints: {
+                            640: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 1,
+                                spaceBetween: 40,
+                            },
+                            1024: {
+                                slidesPerView: 1,
+                                spaceBetween: 50,
+                            },
+                        },
+                    });
+                }
+            }
         });
     </script>
 </body>
