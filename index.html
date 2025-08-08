@@ -152,6 +152,9 @@
                 <button data-target="orientacao-desktop" class="tab-btn text-2xl font-semibold py-4 px-8 transition-all border-b-4 border-transparent text-gray-500 hover:border-gray-300" style="font-family: var(--font-main);">
                     Orientação Vocacional
                 </button>
+                <button data-target="supervisao-desktop" class="tab-btn text-2xl font-semibold py-4 px-8 transition-all border-b-4 border-transparent text-gray-500 hover:border-gray-300" style="font-family: var(--font-main);">
+                    Supervisão Profissional
+                </button>
             </div>
 
             <!-- Conteúdo das Abas -->
@@ -187,6 +190,18 @@
                         <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">3.</div><div><h3 class="text-xl font-bold mb-1">Exploração de carreiras</h3><p style="color: var(--text-secondary-color);">Investigamos diferentes áreas profissionais, cursos e mercado de trabalho, sempre conectando com seu perfil.</p></div></div>
                         <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">4.</div><div><h3 class="text-xl font-bold mb-1">Aplicação de testes</h3><p style="color: var(--text-secondary-color);">Utilizamos instrumentos específicos para avaliar interesses profissionais e características vocacionais.</p></div></div>
                         <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">5.</div><div><h3 class="text-xl font-bold mb-1">Síntese e planejamento</h3><p style="color: var(--text-secondary-color);">Integramos todas as informações coletadas e construímos juntos um plano de ação para suas escolhas profissionais.</p></div></div>
+                    </div>
+                </div>
+
+                <!-- Conteúdo Supervisão -->
+                <div id="supervisao-desktop" class="tab-content hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 p-4">
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">1.</div><div><h3 class="text-xl font-bold mb-1">Contato Inicial e Alinhamento</h3><p style="color: var(--text-secondary-color);">Conversa sobre as necessidades do supervisionando, área de atuação, casos clínicos e objetivos com a supervisão.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">2.</div><div><h3 class="text-xl font-bold mb-1">Definição do Contrato</h3><p style="color: var(--text-secondary-color);">Estabelecimento da frequência (semanal, quinzenal), formato (individual ou em grupo) e valores dos encontros.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">3.</div><div><h3 class="text-xl font-bold mb-1">Estudo de Caso e Discussão</h3><p style="color: var(--text-secondary-color);">O supervisionando apresenta casos, e juntos exploramos as dificuldades, estratégias de intervenção e o manejo terapêutico.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">4.</div><div><h3 class="text-xl font-bold mb-1">Aprofundamento Teórico-Prático</h3><p style="color: var(--text-secondary-color);">Conexão da prática clínica com a teoria (TCC e Terapias Contextuais) para embasar as intervenções e raciocínio clínico.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">5.</div><div><h3 class="text-xl font-bold mb-1">Desenvolvimento de Habilidades</h3><p style="color: var(--text-secondary-color);">Foco no aprimoramento de competências do terapeuta, como manejo de crises, vínculo e aplicação de técnicas.</p></div></div>
+                        <div class="flex items-start space-x-4"><div class="text-3xl font-bold text-accent mt-1">6.</div><div><h3 class="text-xl font-bold mb-1">Suporte e Cuidado ao Terapeuta</h3><p style="color: var(--text-secondary-color);">Um espaço seguro para o profissional compartilhar suas angústias e desafios, visando prevenir o esgotamento (burnout).</p></div></div>
                     </div>
                 </div>
             </div>
@@ -247,6 +262,23 @@
                         <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">4.</span> Aplicação de testes</h3><p style="color: var(--text-secondary-color);">Utilizamos instrumentos específicos para avaliar interesses profissionais.</p></div>
                         <div><h3 class="text-lg font-bold mb-1"><span class="text-accent">5.</span> Síntese e planejamento</h3><p style="color: var(--text-secondary-color);">Integramos as informações e construímos juntos um plano de ação para suas escolhas.</p></div>
                     </div>
+                </div>
+            </div>
+
+             <!-- Item Accordion Supervisão -->
+             <div class="border border-gray-200 rounded-lg">
+                <button class="accordion-btn w-full text-left p-4 font-bold text-xl flex justify-between items-center hover:bg-light-accent transition-colors" style="font-family: var(--font-main);">
+                    <span>Supervisão profissional</span>
+                    <svg class="accordion-arrow w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div class="accordion-content hidden p-4 pt-0">
+                   <div class="space-y-6">
+                    <div><h3 class="text-lg font-bold mb-1">1. Contato Inicial e Alinhamento</h3><p style="color: var(--text-secondary-color);">Conversa sobre as necessidades do supervisionando, área de atuação, casos clínicos e objetivos com a supervisão.</p></div>
+                    <div><h3 class="text-lg font-bold mb-1">2. Definição do Contrato</h3><p style="color: var(--text-secondary-color);">Estabelecimento da frequência, formato (individual ou em grupo) e valores dos encontros.</p></div>
+                    <div><h3 class="text-lg font-bold mb-1">3. Estudo de Caso e Discussão</h3><p style="color: var(--text-secondary-color);">O supervisionando apresenta casos para explorarmos as dificuldades, estratégias e o manejo terapêutico.</p></div>
+                    <div><h3 class="text-lg font-bold mb-1">4. Aprofundamento Teórico-Prático</h3><p style="color: var(--text-secondary-color);">Conexão da prática clínica com a teoria para embasar as intervenções e o raciocínio clínico.</p></div>
+                    <div><h3 class="text-lg font-bold mb-1">5. Desenvolvimento de Habilidades</h3><p style="color: var(--text-secondary-color);">Foco no aprimoramento de competências, como manejo de crises, vínculo e aplicação de técnicas.</p></div>
+                    <div><h3 class="text-lg font-bold mb-1">6. Suporte e Cuidado ao Terapeuta</h3><p style="color: var(--text-secondary-color);">Um espaço seguro para o profissional compartilhar suas angústias e desafios, visando prevenir o esgotamento.</p></div>
                 </div>
             </div>
         </div>
