@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3: Regulação Emocional (Pais) - EducaPais</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .bg-serenity-blue {
+            background-color: #fff8e1;
+        }
+
+        .text-blue-gray-dark {
+            color: #546e7a;
+        }
+
+        .text-coral-soft {
+            color: #ff8a80;
+        }
+
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-poppins antialiased bg-gray-50">
+
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <a href="landing_page_parentalidade.html" class="text-2xl font-bold text-gray-800">EducaPais</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="landing_page_parentalidade.html" class="text-gray-600 hover:text-gray-900">Início</a>
+                    </li>
+                    <li><a href="landing_page_parentalidade.html#modulos"
+                            class="text-gray-600 hover:text-gray-900">Módulos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+            <a href="landing_page_parentalidade.html#modulos"
+                class="inline-block mb-6 text-[#546e7a] hover:text-[#ff8a80] transition">
+                <i class="fas fa-arrow-left mr-2"></i>Voltar para Módulos
+            </a>
+
+            <h1 class="text-3xl font-bold text-[#546e7a] mb-4">Módulo 3: Regulação Emocional (Pais)</h1>
+            <p class="text-gray-600 mb-8">Aprenda a gerenciar suas próprias emoções para ser um guia melhor.</p>
+
+            <div class="w-full bg-gray-200 rounded-md p-6 flex items-center justify-between mb-8">
+                <i class="fas fa-play text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" id="play-btn"></i>
+                <div class="flex-grow mx-4 h-2 bg-gray-400 rounded-full"></div>
+                <span class="text-gray-700 font-mono">00:00 / 00:00</span>
+            </div>
+
+            <div class="border-t pt-8">
+                <h2 class="text-2xl font-semibold text-[#546e7a] mb-4">Material de Apoio</h2>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-full h-[600px] border border-gray-300 rounded-lg flex items-center justify-center bg-gray-100">
+                        <div class="text-center text-gray-500">
+                            <i class="fas fa-file-pdf text-4xl mb-2"></i>
+                            <p>Visualizador de PDF indisponível (Arquivo não encontrado)</p>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="bg-[#ff8a80] hover:bg-[#ff5252] text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out mt-6">
+                        <i class="fas fa-file-pdf mr-2"></i>Baixar Cartilha
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#546e7a] text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 EducaPais. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('play-btn').addEventListener('click', function () {
+            if (this.classList.contains('fa-play')) {
+                this.classList.remove('fa-play');
+                this.classList.add('fa-pause');
+            } else {
+                this.classList.remove('fa-pause');
+                this.classList.add('fa-play');
+            }
+        });
+    </script>
+</body>
+
+</html>
