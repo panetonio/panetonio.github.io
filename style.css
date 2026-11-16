@@ -52,6 +52,19 @@ h1, h2, h3, h4, h5, h6 {
     color: rgb(31 41 55 / 1); /* Corresponds to text-gray-800 */
 }
 
+/* Hero */
+.hero-ring {
+    border: 2px solid var(--extra-light-color);
+    background: radial-gradient(circle at 30% 30%, rgba(190, 171, 139, 0.35), transparent 70%);
+}
+.hero-badge {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    border: 1px solid var(--extra-light-color);
+}
+.hero-badge:hover { color: var(--accent-color); }
+.hero-facts { border-top: 1px solid var(--extra-light-color); }
+
 /* Ajuste para o header transparente */
 .header-bg {
     background-color: rgba(227, 223, 211, 0.8); /* var(--bg-color) com transparência */

@@ -62,21 +62,40 @@
         <!--
           HERO SECTION
         -->
-        <section id="inicio" class="container mx-auto px-6 py-20 md:py-32">
-            <div class="grid grid-cols-1 md:grid-cols-2 md:grid-cols-[2fr_3fr] gap-12 items-center">
+        <section id="inicio" class="container mx-auto px-6 py-16 md:py-20 lg:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 lg:gap-20 items-center">
                 <div class="flex justify-center">
-                    <img src="public/fotos/gabi-tall.jpg" alt="Foto da psicóloga Gabriela Arakaki" class="rounded-full w-80 h-80 md:w-96 md:h-96 object-cover shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/500x500/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
+                    <div class="relative">
+                        <div class="hero-ring absolute -inset-4 md:-inset-5 rounded-full" aria-hidden="true"></div>
+                        <img src="public/fotos/gabi-tall.jpg" alt="Foto da psicóloga Gabriela Arakaki" class="relative rounded-full w-72 h-72 md:w-80 md:h-80 lg:w-[26rem] lg:h-[26rem] object-cover shadow-2xl" onerror="this.onerror=null;this.src='https://placehold.co/500x500/F7F2F1/A36A64?text=Imagem+Indispon%C3%ADvel';">
+                        <a href="singularis/" class="hero-badge absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap text-sm font-semibold py-2 px-4 rounded-full shadow-lg">Fundadora do Instituto Singularis</a>
+                    </div>
                 </div>
-                <div class="text-center md:text-right">
+                <div class="text-center md:text-left">
                     <p class="mb-4 text-lg font-semibold" style="color: var(--primary-color);">Psicóloga e Neuropsicóloga | CRP 14/09498</p>
-                    <h1 class="text-5xl md:text-5xl font-bold leading-tight">Conhecer sua mente é o primeiro passo para transformá-la</h1>
-                    <p class="mt-6 text-lg" style="color: var(--text-secondary-color); ">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Conhecer sua mente é o primeiro passo para transformá-la</h1>
+                    <p class="mt-6 text-lg max-w-xl mx-auto md:mx-0" style="color: var(--text-secondary-color); ">
                         Sou Gabriela Arakaki, psicóloga e neuropsicóloga. Na minha prática, busco integrar acolhimento, escuta qualificada e ciência.
                     </p>
-                    <a href="https://wa.me/5567981091382?text=Olá,%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="mt-8 inline-block bg-accent text-white font-bold text-lg py-4 px-8 rounded-lg hover:bg-accent-hover transition-transform transform hover:scale-105 shadow-lg">Quero agendar minha consulta</a>
-                    <p class="mt-4 text-sm text-gray-500">Atendimento online e presencial.</p>
+                    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
+                        <a href="https://wa.me/5567981091382?text=Olá,%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="inline-block bg-accent text-white font-bold text-lg py-4 px-8 rounded-lg hover:bg-accent-hover transition-transform transform hover:scale-105 shadow-lg">Quero agendar minha consulta</a>
+                        <a href="#como-funciona" class="inline-block font-semibold text-lg py-4 px-6 rounded-lg border-2 border-accent text-accent hover:bg-white/50 transition-colors">Conheça os serviços</a>
+                    </div>
+                    <dl class="hero-facts mt-10 pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center md:text-left">
+                        <div>
+                            <dt class="text-xs font-semibold uppercase tracking-widest" style="color: var(--accent-color);">Abordagens</dt>
+                            <dd class="mt-1 font-medium" style="color: var(--text-secondary-color);">TCC e Terapias Contextuais (DBT)</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs font-semibold uppercase tracking-widest" style="color: var(--accent-color);">Público</dt>
+                            <dd class="mt-1 font-medium" style="color: var(--text-secondary-color);">Adolescentes e adultos</dd>
+                        </div>
+                        <div>
+                            <dt class="text-xs font-semibold uppercase tracking-widest" style="color: var(--accent-color);">Atendimento</dt>
+                            <dd class="mt-1 font-medium" style="color: var(--text-secondary-color);">On-line e presencial em Campo Grande</dd>
+                        </div>
+                    </dl>
                 </div>
-
             </div>
         </section>
 
@@ -434,18 +453,23 @@
         -->
         <section id="localizacao" class="bg-white py-20 md:py-24">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
+                <div class="text-center mb-12 md:mb-16">
                     <h2 class="text-4xl font-bold">Atendimento Presencial e On-line</h2>
                     <p class="text-lg mt-2" style="color: var(--text-secondary-color);">Rua Pedro Celestino, 2560, Centro</p>
-                    <p class="text-lg" style="color: var(--text-secondary-color);">Campo Grande - MS</p>
+                    <p class="text-lg" style="color: var(--text-secondary-color);">Campo Grande - MS, 79002-372</p>
+                    <a href="https://share.google/9e1GgRuZ05HcBDUXU" target="_blank" rel="noopener" class="inline-block mt-4 font-semibold text-accent hover:underline">Abrir no Google Maps &rarr;</a>
                 </div>
 
-                <!-- Mapa -->
-                <div class="max-w-4xl mx-auto">
+                <!-- Foto da recepção + Mapa -->
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-6 md:gap-8">
+                    <figure class="m-0">
+                        <img src="public/fotos/recepcao-singularis.jpg" alt="Recepção do Instituto Singularis, com o logotipo na parede e balcão de madeira" width="1050" height="1400" loading="lazy" class="w-full h-80 sm:h-96 md:h-[460px] object-cover rounded-2xl shadow-xl" style="object-position: 50% 35%;">
+                        <figcaption class="mt-3 text-sm text-center md:text-left" style="color: var(--text-secondary-color);">Recepção do Instituto Singularis</figcaption>
+                    </figure>
                     <iframe
-                        src="https://maps.google.com/maps?q=Rua%20Pedro%20Celestino%2C%202560%2C%20Centro%2C%20Campo%20Grande%2C%20MS&z=16&output=embed"
-                        width="100%"
-                        height="400"
+                        title="Mapa: Rua Pedro Celestino, 2560, Centro, Campo Grande - MS"
+                        src="https://maps.google.com/maps?q=Rua%20Pedro%20Celestino%2C%202560%2C%20Centro%2C%20Campo%20Grande%20-%20MS%2C%2079002-372&z=17&output=embed"
+                        class="w-full h-80 sm:h-96 md:h-[460px] shadow-xl"
                         style="border:0; border-radius: 1rem;"
                         allowfullscreen=""
                         loading="lazy"
