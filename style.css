@@ -6,8 +6,8 @@
     --accent-hover-color: #8a6040; /* Marrom mais escuro para hover */
     --light-accent-color: #BEAB8B; /* Taupe Claro - para fundos secundários */
     --extra-light-color: #CABDAA; /* Taupe Acinzentado - para bordas, etc. */
-    --text-primary-color: #1D1D1D; /* Quase Preto - para texto principal */
-    --text-secondary-color: #5c5c5c; /* Cinza escuro para texto secundário */
+    --text-primary-color: var(--primary-color); /* Verde oliva para o texto principal */
+    --text-secondary-color: #5c6047; /* Verde oliva suave para texto secundário */
 
     --font-main: 'Playfair Display', serif;
     --font-secondary: 'Inter', sans-serif;
@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary-color);
 
   summary {
-    color: rgb(29, 29, 29);
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
