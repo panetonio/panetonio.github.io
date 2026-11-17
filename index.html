@@ -7,6 +7,16 @@
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Limita a largura do container para manter margem lateral em notebooks (1280px)
+        tailwind.config = {
+            theme: {
+                container: {
+                    screens: { sm: '640px', md: '768px', lg: '1024px', xl: '1200px' }
+                }
+            }
+        };
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,7 +91,7 @@
                         <a href="https://wa.me/5567981091382?text=Olá,%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" class="inline-block bg-accent text-white font-bold text-lg py-4 px-8 rounded-lg hover:bg-accent-hover transition-transform transform hover:scale-105 shadow-lg">Quero agendar minha consulta</a>
                         <a href="#como-funciona" class="inline-block font-semibold text-lg py-4 px-6 rounded-lg border-2 border-accent text-accent hover:bg-white/50 transition-colors">Conheça os serviços</a>
                     </div>
-                    <dl class="hero-facts mt-10 pt-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center md:text-left">
+                    <dl class="hero-facts mt-10 pt-8 flex flex-col sm:flex-row sm:justify-between gap-6 sm:gap-8 text-center md:text-left">
                         <div>
                             <dt class="text-xs font-semibold uppercase tracking-widest" style="color: var(--accent-color);">Abordagens</dt>
                             <dd class="mt-1 font-medium" style="color: var(--text-secondary-color);">TCC e Terapias Contextuais (DBT)</dd>
@@ -92,7 +102,7 @@
                         </div>
                         <div>
                             <dt class="text-xs font-semibold uppercase tracking-widest" style="color: var(--accent-color);">Atendimento</dt>
-                            <dd class="mt-1 font-medium" style="color: var(--text-secondary-color);">On-line e presencial em Campo Grande</dd>
+                            <dd class="mt-1 font-medium" style="color: var(--text-secondary-color);">On-line e presencial em Campo Grande, MS</dd>
                         </div>
                     </dl>
                 </div>
@@ -124,17 +134,11 @@
                                   <p style="color: var(--text-secondary-color);">• Fundadora do Instituto Singularis</p>
                                 </div>
 
-                                <!-- Coluna 2: wrapper com Formações + Registro -->
-                                <div class="flex flex-col gap-4">
-                                  <div>
+                                <!-- Coluna 2: Certificações -->
+                                <div>
                                     <p class="font-semibold text-accent">Certificações</p>
                                     <p style="color: var(--text-secondary-color);">• Terapia cognitivo-comportamental (TCC)</p>
                                     <p style="color: var(--text-secondary-color);">• Terapia comportamental dialética (DBT)</p>
-                                  </div>
-                                  <div>
-                                    <p class="font-semibold text-accent">Registro Profissional</p>
-                                    <p style="color: var(--text-secondary-color);">• CRP 14/09498</p>
-                                  </div>
                                 </div>
                               </div>
 
@@ -462,10 +466,7 @@
 
                 <!-- Foto da recepção + Mapa -->
                 <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-6 md:gap-8">
-                    <figure class="m-0">
-                        <img src="public/fotos/recepcao-singularis.jpg" alt="Recepção do Instituto Singularis, com o logotipo na parede e balcão de madeira" width="1050" height="1400" loading="lazy" class="w-full h-80 sm:h-96 md:h-[460px] object-cover rounded-2xl shadow-xl" style="object-position: 50% 35%;">
-                        <figcaption class="mt-3 text-sm text-center md:text-left" style="color: var(--text-secondary-color);">Recepção do Instituto Singularis</figcaption>
-                    </figure>
+                    <img src="public/fotos/recepcao-singularis.jpg" alt="Recepção do Instituto Singularis, com o logotipo na parede e balcão de madeira" width="1050" height="1400" loading="lazy" class="w-full h-80 sm:h-96 md:h-[460px] object-cover rounded-2xl shadow-xl" style="object-position: 50% 35%;">
                     <iframe
                         title="Mapa: Rua Pedro Celestino, 2560, Centro, Campo Grande - MS"
                         src="https://maps.google.com/maps?q=Rua%20Pedro%20Celestino%2C%202560%2C%20Centro%2C%20Campo%20Grande%20-%20MS%2C%2079002-372&z=17&output=embed"
